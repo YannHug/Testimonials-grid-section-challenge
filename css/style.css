@@ -7,7 +7,10 @@ html {
   --grayish-blue: #ecf2f8;
 
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
 }
+
+/* Mobile First */
 
 .attribution {
   font-size: 11px;
@@ -98,4 +101,52 @@ body {
 
 .article--patrick {
   background-color: var(--blackish-blue);
+}
+
+/* Desktop 1440px */
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto 20% 20% 20% 20% auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .article--daniel {
+    grid-column: 2 / span 2;
+    grid-row: 2 / 2;
+  }
+
+  .article--jonathan {
+    grid-column: 4 / span 1;
+    grid-row: 2 / 2;
+  }
+
+  .article--kira {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 2;
+  }
+
+  .article--jeanette {
+    grid-column: 2 / span 1;
+    grid-row: 3 / 3;
+  }
+
+  .article--patrick {
+    grid-column: 3 / span 2;
+    grid-row: 3 / 3;
+  }
+
+  .attribution {
+    grid-column: 1 / span 6;
+    grid-row: 4 / 4;
+  }
 }
